@@ -137,7 +137,7 @@ conditional_layers {
         if-layers = <LOWER RAISE>;
         then-layer = <TRI>;
     }
-}
+};
 
 keymap {
     compatible = "zmk,keymap";
