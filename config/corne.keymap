@@ -104,7 +104,6 @@ behaviors {
 
         hold-trigger-on-release;
     };    
-};
 
 #define _CTRL_ESC_      &mt LCTRL ESC
 #define _HOME_A_        &hml LCTRL A
@@ -137,6 +136,8 @@ conditional_layers {
         if-layers = <LOWER RAISE>;
         then-layer = <TRI>;
     }
+};
+
 };
 
 keymap {
