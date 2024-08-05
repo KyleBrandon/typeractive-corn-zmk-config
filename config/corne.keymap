@@ -74,7 +74,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
 
-        hold-trigger-key-positions = <KEYS_LEFT THUMBS>;-
+        hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
         hold-trigger-on-release;
     };
 
