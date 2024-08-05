@@ -9,17 +9,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include "./keypos_42keys.h"
 
-/ {
 /* Bluetooth */
 #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 
 /* Layers */
-#define BASE    0
-#define LOWER   1
-#define RAISE   2
-#define TRI     3
+#define LAYER_Base    0
+#define LAYER_Lower   1
+#define LAYER_Raise   2
+#define LAYER_Tri     3
 
 /* Homerow mods */
+/ {
 behaviors {
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
@@ -74,7 +74,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
 
-        hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
+        hold-trigger-key-positions = <KEYS_LEFT THUMBS>;-
         hold-trigger-on-release;
     };
 
@@ -104,6 +104,8 @@ behaviors {
 
         hold-trigger-on-release;
     };    
+};
+};
 
 #define _CTRL_ESC_      &mt LCTRL ESC
 #define _HOME_A_        &hml LCTRL A
@@ -129,21 +131,22 @@ behaviors {
 #define _SCRN_CAP_      &kp RG(RS(N4))
 #define _ZOOM_IN_       &kp RG(RS(EQUAL))
 #define _ZOOM_OUT_      &kp RG(MINUS)
+/ {
 
 conditional_layers { 
     compatible = "zmk,conditional-layers";
     binding {
-        if-layers = <LOWER RAISE>;
-        then-layer = <TRI>;
+        if-layers = <LAYER_Lower LAYER_Raise>;
+        then-layer = <LAYER_Tri>;
     }
 };
-
 };
 
+/ {
 keymap {
     compatible = "zmk,keymap";
 
-    layer_base {
+    layer_Base {
         display-name = "base";
         bindings = <
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
@@ -157,7 +160,7 @@ keymap {
 //                                             ╰──────────────┴──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┴──────────────╯
         >;
     };
-    layer_lower {
+    layer_Lower {
         display-name = "lower";
         bindings = <
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
@@ -172,7 +175,7 @@ keymap {
         >;
     };
 
-    layer_raise {
+    layer_Raise {
         display-name = "raise";
         bindings = <
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
@@ -187,7 +190,7 @@ keymap {
         >;
     };
 
-    layer_tri {
+    layer_Tri {
         display-name = "tri";
         bindings = <
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
