@@ -24,9 +24,9 @@
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
 
-    #define TAP_TERM_MS                     270
+    #define TAP_TERM_MS                     200
     #define QUICK_TAP_MS                    300
-    #define REQUIRE_PRIOR_IDLE_MS           250
+    #define REQUIRE_PRIOR_IDLE_MS           150
 
     #define INDEX_TAP_TERM_MS               170
     #define INDEX_QUICK_TAP_MS              300
@@ -120,11 +120,11 @@
 
 
 #define _THUMB_LH0_     &lt 1 SPACE
-#define _THUMB_LH1_     &hml LSHFT LBRC
+#define _THUMB_LH1_     &kp LBKT
 #define _THUMB_LH2_     &kp TAB
 
 #define _THUMB_RH0_     &lt 2 ENTER
-#define _THUMB_RH1_     &hmr RSHFT RBRC
+#define _THUMB_RH1_     &kp RBKT
 #define _THUMB_RH2_     &kp BSPC
 
 #define _MAC_LOCK_      &kp RG(RC(Q))
@@ -168,7 +168,7 @@ keymap {
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT                 &kp CARET      &kp AMPS       &kp STAR       &kp MINUS      &kp PLUS       &kp PIPE
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &kp MINUS      &none          &kp LPAR       &kp RPAR       &kp LBRC       &kp RBRC                  &kp LBKT       &kp RBKT       &kp EQUAL      &kp DOT        &kp BSLH       &kp UNDER
+    &kp MINUS      &none          &none          &none          &kp LT         &kp LPAR                  &kp RPAR       &kp GT         &kp EQUAL      &kp DOT        &kp BSLH       &kp UNDER
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                                                  &trans         &trans         &trans                    &trans         &trans         &trans
 //                                             ╰──────────────┴──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┴──────────────╯
