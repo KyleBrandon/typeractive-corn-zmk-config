@@ -119,12 +119,12 @@
 #define _HOME_SEMI_     &hmr RCTRL SEMI
 
 
-#define _THUMB_LH2_     &lt 1 SPACE
-#define _THUMB_LH1_     &kp LBKT
+#define _THUMB_LH2_     &kp LBKT
+#define _THUMB_LH1_     &lt 1 SPACE
 #define _THUMB_LH0_     &kp TAB
 
-#define _THUMB_RH2_     &lt 2 ENTER
-#define _THUMB_RH1_     &kp RBKT
+#define _THUMB_RH2_     &kp RBKT
+#define _THUMB_RH1_     &lt 2 ENTER
 #define _THUMB_RH0_     &kp BSPC
 
 #define _MAC_LOCK_      &kp RG(RC(Q))
