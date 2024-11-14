@@ -127,6 +127,9 @@
 #define _THUMB_RH1_     &lt 2 ENTER
 #define _THUMB_RH0_     &kp BSPC
 
+#define _MINUS_SHFT_    &hml LSHFT MINUS
+#define _UNDER_SHFT_    &hmr RSHFT UNDER
+
 #define _MAC_LOCK_      &kp RG(RC(Q))
 #define _SCRN_CAP_      &kp RG(RS(N4))
 #define _ZOOM_IN_       &kp RG(RS(EQUAL))
@@ -154,7 +157,7 @@ keymap {
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     _CTRL_ESC_     _HOME_A_       _HOME_S_       _HOME_D_       _HOME_F_       &kp G                     &kp H          _HOME_J_       _HOME_K_       _HOME_L_       _HOME_SEMI_    &kp SQT
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &kp MINUS      &kp Z          &kp X          &kp C          &kp V          &kp B                     &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &kp UNDER
+    _MINUS_SHFT_   &kp Z          &kp X          &kp C          &kp V          &kp B                     &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       _UNDER_SHFT_
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                                                  _THUMB_LH2_    _THUMB_LH1_    _THUMB_LH0_               _THUMB_RH0_    _THUMB_RH1_    _THUMB_RH2_
 //                                             ╰──────────────┴──────────────┴──────────────╯ ╰──────╯ ╰──────────────┴──────────────┴──────────────╯
